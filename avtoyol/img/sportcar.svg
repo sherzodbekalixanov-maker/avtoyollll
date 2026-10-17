@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4fd8ff"/><stop offset="1" stop-color="#7a5cff"/></linearGradient></defs>
+<path d="M20 140V118Q20 104 44 100L150 88Q200 40 280 38H370Q440 44 480 88L560 100Q585 106 585 128V140Z" fill="url(#b)"/>
+<path d="M175 88Q215 54 285 54H300V88ZM312 88V54H368Q420 60 450 88Z" fill="#0b1426" opacity=".75"/>
+<circle cx="140" cy="142" r="38" fill="#0b1426"/><circle cx="140" cy="142" r="20" fill="#c9d3ea"/><circle cx="470" cy="142" r="38" fill="#0b1426"/><circle cx="470" cy="142" r="20" fill="#c9d3ea"/>
+<rect x="570" y="108" width="20" height="9" rx="4" fill="#ffe27a"/></svg>

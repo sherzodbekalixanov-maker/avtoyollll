@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AvtoYo‘l — mashina topish va muammolarini hal qilish</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="prog" id="prog"></div>
+<div class="bg"><div class="stars"></div><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><div class="mount"></div><img class="art gear" src="img/gear.svg" alt=""><img class="art wheel" src="img/wheel.svg" alt=""><img class="art sport" src="img/sportcar.svg" alt=""><div class="city"></div><div class="lane" id="lane"></div></div>
+<header class="nav"><a class="logo" href="#home">Avto<b>Yo‘l</b></a>
+<button class="burger" id="burger" aria-label="Menyu">☰</button>
+<nav id="menu"><a href="#home">Bosh sahifa</a><a href="#about">Biz haqimizda</a><a href="#find">Mashina topish</a><a href="#add">E‘lon qo‘shish</a><a href="#parts">Zapchastlar</a><a href="#problems">Muammolar</a><a class="cta" href="#register">Ro‘yxatdan o‘tish</a></nav></header>
+<main>
+<section class="page" id="home">
+ <div class="hero"><div class="hero-t">
+  <h1>Mashinangizni toping. Muammosini yo‘lda qoldirmang.</h1>
+  <p>Manzil yoki davlat raqami bo‘yicha mashina qidiring, nosozlikni yozing — sabab, yechim va zapchast narxini darrov ko‘ring.</p>
+  <div class="btns"><a class="btn" href="#find">Mashina topish</a><a class="btn ghost" href="#problems">Muammoni yozish</a></div></div>
+  <div class="hero-c"><div class="speed"><i></i><i></i><i></i><i></i></div><div id="heroCar" class="float"></div></div></div>
+ <div class="marquee"><div id="mq"></div></div>
+ <div class="stats"><div class="rv"><b data-n="1200">0</b><span>mashina bazada</span></div><div class="rv"><b data-n="350">0</b><span>zapchast turi</span></div><div class="rv"><b data-n="48">0</b><span>nosozlik yechimi</span></div><div class="rv"><b data-n="14">0</b><span>viloyat va shahar</span></div></div>
+ <h2 class="rv sec">Uch qadamda natija</h2>
+ <div class="steps"><div class="rv"><em>1</em><h3>Manzilni kiriting</h3><p>Shahar yoki viloyatni yozing, yaqin atrofdagi mashinalar narxi bilan chiqadi.</p></div><div class="rv"><em>2</em><h3>Raqamni tekshiring</h3><p>Davlat raqamini yozing: rasm, yili, probeg va holati ko‘rinadi.</p></div><div class="rv"><em>3</em><h3>Muammoni hal qiling</h3><p>Nosozlikni so‘z bilan yozing, sabab va kerakli zapchast narxini oling.</p></div></div>
+ <div class="tiles"><a class="rv tile" href="#find"><h3>Mashina topish</h3><p>Narx, rasm, manzil</p></a><a class="rv tile" href="#parts"><h3>Zapchastlar</h3><p>Narxlar bilan katalog</p></a><a class="rv tile" href="#problems"><h3>Muammolar</h3><p>Yozing — yechim chiqadi</p></a></div>
+</section>
+
+<section class="page" id="about"><h2 class="sec rv">Biz haqimizda</h2>
+ <div class="two"><div class="rv card"><h3>Nima uchun AvtoYo‘l?</h3><p>Mashina sotib olish ham, uni ta’mirlash ham ko‘p vaqt oladi. Biz uchta ishni bir joyga jamladik: mashina qidirish, nosozlik sababini aniqlash va kerakli zapchastni narxi bilan topish.</p></div>
+ <div class="rv card"><h3>Qanday ishlaymiz?</h3><p>Siz oddiy so‘z bilan yozasiz, masalan «dvigatel qizib ketyapti». Tizim mos nosozlikni, taxminiy ta’mir narxini va zapchastlarni ko‘rsatadi.</p></div>
+ <div class="rv card"><h3>Maqsadimiz</h3><p>Har bir haydovchi ustaxonaga borishdan oldin muammosi va xarajatini bilsin.</p></div>
+ <div class="rv card"><h3>Aloqa</h3><p>Telefon: +998 90 000 00 00<br>Manzil: Toshkent shahri<br>Ish vaqti: har kuni 09:00–20:00</p></div></div></section>
+
+<section class="page" id="find"><h2 class="sec rv">Mashina topish</h2>
+ <form class="card form rv" id="ff"><label>Marka yoki model<input id="q" placeholder="Masalan: Gentra, Kia, Camry"></label>
+ <label>Manzil (shahar yoki viloyat)<input id="addr" list="regs" placeholder="Masalan: Toshkent"></label>
+ <label>Narx (gacha, $)<input id="pmax" type="number" min="0" placeholder="Masalan: 20000"></label>
+ <label>Ishlab chiqarilgan yil (dan)<input id="ymin" type="number" min="1990" max="2026" placeholder="Masalan: 2019"></label>
+ <label>Davlat raqami<input id="plate" placeholder="Masalan: 01 A 777 AA"></label>
+ <button class="btn">Qidirish</button><datalist id="regs"></datalist></form>
+ <p class="note" id="fcount"></p><div id="fres" class="grid"></div></section>
+
+<section class="page" id="add"><h2 class="sec rv">Mashina e‘loni qo‘shish</h2>
+ <form class="card form rv" id="af"><label>Marka va model<input id="an" required placeholder="Masalan: Chevrolet Gentra"></label>
+ <label>Yili<input id="ay" type="number" min="1980" max="2026" required></label><label>Narxi ($)<input id="ap" type="number" min="100" required></label>
+ <label>Manzil<input id="ar" list="regs" required placeholder="Toshkent"></label><label>Probeg (km)<input id="ak" type="number" min="0" required></label>
+ <label>Davlat raqami<input id="al" placeholder="01 A 123 AA"></label><label>Telefon<input id="at" required placeholder="+998 __ ___ __ __"></label>
+ <label>Kuzov turi<select id="aty"><option value="sedan">Sedan / hetchbek</option><option value="suv">SUV / krossover</option></select></label>
+ <label>Rangi<input id="ac" type="color" value="#c9ccd1"></label><label>Rasm (ixtiyoriy)<input id="ai" type="file" accept="image/*"></label>
+ <button class="btn">E‘lonni joylash</button></form><p class="note" id="am"></p></section>
+
+<section class="page" id="parts"><h2 class="sec rv">Zapchastlar</h2>
+ <div class="bar rv"><input id="ps" placeholder="Zapchast nomini yozing…"><div id="cats"></div></div>
+ <div id="pgrid" class="grid"></div></section>
+
+<section class="page" id="problems"><h2 class="sec rv">Mashina muammosi</h2>
+ <form class="card form rv" id="pf"><label>Muammoni yozing<textarea id="pt" rows="3" placeholder="Masalan: tormoz bossam g‘ichirlayapti yoki dvigatel qizib ketyapti"></textarea></label><button class="btn">Yechim topish</button></form>
+ <div class="chips rv" id="chips"></div><div id="pres" class="grid"></div></section>
+
+<section class="page" id="register"><h2 class="sec rv">Ro‘yxatdan o‘tish</h2>
+ <form class="card form narrow rv" id="rf"><label>Ism<input id="rn" required></label><label>Telefon<input id="rp" required placeholder="+998 __ ___ __ __"></label><label>Parol<input id="rw" type="password" minlength="4" required></label><button class="btn">Ro‘yxatdan o‘tish</button><p id="rm" class="note"></p></form></section>
+</main>
+<footer>© 2026 AvtoYo‘l — barcha huquqlar himoyalangan</footer>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script></body></html>
